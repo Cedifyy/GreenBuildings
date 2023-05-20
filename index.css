@@ -1,0 +1,190 @@
+header {
+    background-color: #174029;
+    padding: 10px;
+    text-align: center;
+}
+  
+header h1 {
+    color: #989796;
+    text-shadow: 5px 0.5px #000000;
+    font-family: 'Detail';
+    font-stretch: 5px;
+    font-size: 55px;
+    margin: 0;
+}
+
+footer {
+    background-color: #D9A282;
+    padding: 20px;
+    text-align: left;
+}
+  
+footer p {
+    color: #404040;
+    font-size: 20px;
+    margin: 0;
+}
+
+.navbar {
+    width: 250px;
+    height: 100%;
+    background-color: #8C594D;
+    box-shadow: 4px 5px #D9A282;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    padding: 20px;
+    z-index: 1;
+    text-decoration: none;
+    display: inline;
+    list-style-type: none;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+  
+nav ul li {
+    display: block;
+    font-size: 70px;
+}
+  
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.content {
+    margin-left: 20px;
+    padding: 20px;
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+}
+
+.navbar {
+    transform: translateX(-250px);
+    transition: transform 0.3s ease;
+}
+  
+.navbar.open {
+    transform: translateX(0);
+}
+  
+.content {
+    transition: margin-left 0.3s ease;
+}
+  
+.content.shift {
+    margin-left: 0;
+}
+  
+body {
+    overflow-x: hidden; 
+}  
+
+.gb {
+    background-color: #593622;
+    color: white;
+    padding: 50px;
+    margin: 40px;
+}
+  
+.columns {
+    display: flex;
+}
+  
+.column {
+    flex-basis: 50%;
+}
+
+.faq-item {
+    display: none;
+}
+  
+.faq-item.active {
+    display: block;
+}
+
+.picture {
+    width: 300px;
+    height: 600px;
+    object-fit: cover;
+    margin: 50px;
+}
+
+.ff {
+    background-color: #593622;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 25px;
+}
+  
+@font-face {
+    font-family: 'Title';
+    src: url('PetitFormalScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'detail';
+    src: url('AmaticSC-Regular.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Title';
+}
+
+h2 {
+    font-family: 'Title';
+}
+
+h3 {
+    font-family: 'Title';
+}
+
+h4 {
+    font-family: 'Title';
+}
+
+h6 {
+    font-family: 'Title';
+}
+
+p,li {
+    font-family: 'Detail';
+    font-size: 40px;
+}
+
+* {
+    border-radius: 10px;
+}
+
+#currentDate {
+    font-family: 'Detail';
+    font-size: 40px;
+    margin-top: 20px;
+    margin-left: 250px;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    text-align: center;
+}
+  
+.head {
+    margin-right: 100px;
+    margin-left: 40%;
+}
+
+#intro {
+    text-align: center;
+}

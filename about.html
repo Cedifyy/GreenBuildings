@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="fonts.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    
+        <div class="content">
+            <div class="container">
+                <div class="left-section">
+                    <div class="picture">
+                        <img src="abt1.jpg" alt="Profile Picture">
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div>
+                        <h1>About me</h1>
+                        <p class="abtme">
+                            Hi, this is me the creator of this webpage. This is a webpage all about Green Buildings, incorporated with HTML, CSS, and JavaScript. I am not that good in making webpages yet, but I have made effort and put together this webpage. Hope it gave new information and learnings!
+                        </p>
+                    </div>
+                    <div class="links">
+                        <a href="https://www.facebook.com/cedrickmatthew.martinez.9/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i>Facebook</a>
+                        <a href="https://www.instagram.com/itscedifyy_/" target="_blank" class="social-link"><i class="fab fa-instagram"></i>Instagram</a>
+                        <a href="https://twitter.com/cedifyy" target="_blank" class="social-link"><i class="fab fa-twitter"></i>Twitter</a>
+                        <span>Email: cmartinez@crc.pshs.edu.ph</span>
+                        <span>Contact Number: +09076919455</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbar = document.querySelector(".navbar");
+            var content = document.querySelector(".content");
+
+            navbar.addEventListener("click", function() {
+            navbar.classList.toggle("open");
+            content.classList.toggle("shift");
+        });
+    });
+    </script>
+</html>

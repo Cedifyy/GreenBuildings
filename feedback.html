@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Green Buildings - Feedback Page</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="feedback.css">
+    </head>
+    <body>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>  
+        </nav>
+        
+        <div class="content">
+          <header class="header-content">
+            <h1 class="head">Feedback Page</h1>
+            <div id="currentDate"></div>
+          </header>
+      
+          <form id="feedback">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" pattern="[0-9]+" required>
+      
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+      
+            <label for="rating">Rating:</label>
+            <div id="rating">
+              <input type="radio" id="s1" name="rating" value="1" required>
+              <label for="s1">1 Star</label>
+              <input type="radio" id="s2" name="rating" value="2" required>
+              <label for="s2">2 Stars</label>
+              <input type="radio" id="s3" name="rating" value="3" required>
+              <label for="s3">3 Stars</label>
+              <input type="radio" id="s4" name="rating" value="4" required>
+              <label for="s4">4 Stars</label>
+              <input type="radio" id="s5" name="rating" value="5" required>
+              <label for="s5">5 Stars</label>
+            </div>
+      
+            <label for="comments">Comments and Suggestions:</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+      
+            <input type="submit" value="Submit">
+          </form>
+      
+          <footer>
+            <p>Email: cmartinez@crc.pshs.edu.ph</p> 
+          </footer>
+        </div>
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var navbar = document.querySelector(".navbar");
+          var content = document.querySelector(".content");
+    
+          navbar.addEventListener("click", function() {
+            navbar.classList.toggle("open");
+            content.classList.toggle("shift");
+          });
+    
+          function getCurrentDate() {
+            var currentDate = new Date();
+            var day = currentDate.getDate();
+            var month = currentDate.getMonth() + 1;
+            var year = currentDate.getFullYear();
+    
+            var formattedDate = day + '/' + month + '/' + year;
+    
+            return formattedDate;
+          }
+    
+          document.getElementById('currentDate').innerHTML = getCurrentDate();
+    
+          document.getElementById('feedback').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var age = document.getElementById('age').value;
+            var date = document.getElementById('date').value;
+            var rating = document.querySelector('input[name="rating"]:checked').value;
+            var comments = document.getElementById('comments').value;
+    
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Age:", age);
+            console.log("Date:", date);
+            console.log("Rating:", rating);
+            console.log("Comments:", comments);
+
+            document.getElementById('feedback').reset();
+          });
+        });
+    </script>    
+</html>
